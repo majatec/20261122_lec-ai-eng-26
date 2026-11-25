@@ -4,11 +4,15 @@
 
 <!-- [tool call] の行は、表示された行をそのまま貼り付けてください。終わらなかった STEP は、空欄のままでかまいません。 -->
 
-- STEP 1 のツールの名前：
-- STEP 2 の [tool call]：
-- STEP 3 の [tool call]：
-- STEP 4 の [tool call]：
-- 気づき・疑問：
+- STEP 1 のツールの名前：glossary_search_glossary
+- STEP 2 の [tool call]：[tool call]   glossary_search_glossary({'query': '3レベル'})
+- STEP 3 の [tool call]：[tool call]   fetch_fetch({'url': 'https://modelcontextprotocol.io/'})
+- STEP 4 の [tool call]：[tool call]   aws_aws___search_documentation({'search_phrase': 'Amazon S3 バージョニング 概要'})
+[tool return] aws_aws___search_documentation -> {'content': {'result': [{'rank_order': 1, 'title': 'querying-aws-s3', 'skill_description': 'Queries S3 object metadata, …
+[tool call]   aws_aws___search_documentation({'search_phrase': 'What is S3 Versioning', 'topics': ['general']})
+[tool return] aws_aws___search_documentation -> {'content': {'result': [{'rank_order': 1, 'title': 'Amazon S3 FAQs', 'context': '#### What is Versioning?\n\nVersioning …
+
+- 気づき・疑問： ターミナルのようにあまり聞き返してくれないので、講義内で触れられたように、接続先が怪しいサービスでないかの確認が重要と思った
 
 ## 宿題
 
